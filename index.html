@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Happy Birthday</title>
+  </head>
+  <body>
+    <audio src="./song/result.mp3" preload="auto" id="iframeAudio" loop></audio>
+
+    <div class="container-main" style="display: block">
+      <section class="page-1">
+        <h1>Click to continue</h1>
+      </section>
+    </div>
+    <div class="container parallax" style="display: none">
+      <section class="page-2">
+        <div>
+          <h1>Happy Birthday Vidushi ❤</h1>
+          <p class="sub-text">Scroll down</p>
+        </div>
+      </section>
+      <hr />
+      <section class="page-3">
+        <p class="main-content">
+          Viduu ! <br />
+          You’ve turned 21!! And I’m writing a letter for you, lucky you! Guess
+          your charm had worked. You’ve seemed to have cracked the toughest
+          mission on earth, jk :P, making me do cute stuff for you on your Bday.
+          But you deserve all of it. My writing skills aren’t great, and you’ll
+          realise that soon.<br />
+          <br />
+          I love how we are sharing more honest and real versions of ourselves,
+          which makes this not so perfect but very real. I feel good about this.
+          Happy Birthday haan. It's supposed to be happy, so just stop feeling
+          low and cheer up. I’m trying my best to make it so. Imagine krlo i’m
+          gonna be there, waiting under your balcony, and then we drive all the
+          way to ur fav place. Just a matter of time and I’ll make this real !
+          Because you are just amazing! <br /></br>
+          I did try to get a gift for you, spent a lot of time, yet couldn’t
+          find something cute enough. If I were at home with you, I could’ve
+          made your special day more special, nvm , next time i’ll surely clear
+          all your complaints. <br /><br />
+          It’s your birthday, has to be special, does that
+          mean i’ll hype you up with lots of tareef? Maybe. Coz you are super
+          cute, adorable, hot and naughty at times! I might not always say, but
+          our bond has always deepened no matter how many issues we had, it
+          hasn't affected our friendship! <br /><br />
+          It's been more than two years of
+          knowing you and goddamn the Growth; it's beautiful ! Here’s to so many
+          more years to come! Much love! I hope this made your day a bit better.
+          I feel so lucky to have such an amazing person in my life. Thanks for
+          making my life better !  <br /><br />
+          <span class="end">-Nihal</span>
+        </p>
+      </section>
+    </div>
+
+    <script src="confetti.js"></script>
+    <script>
+      const start = () => {
+        setTimeout(function () {
+          confetti.start();
+        }, 1000);
+      };
+      const stop = () => {
+        setTimeout(function () {
+          confetti.stop();
+        }, 5000);
+      };
+      document.addEventListener("click", () => {
+        const page = document.querySelector(".container-main");
+        page.style.display = "none";
+        const page2 = document.querySelector(".container");
+        page2.style.display = "block";
+        start();
+
+        stop();
+      });
+      document.addEventListener("click", musicPlay);
+      function musicPlay() {
+        document.getElementById("iframeAudio").play();
+        document.removeEventListener("click", musicPlay);
+      }
+    </script>
+  </body>
+</html>
